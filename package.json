@@ -13,24 +13,24 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.15",
-    "lucide-react": "latest",
-    "octokit": "latest",
-    "radix-ui": "latest",
-    "class-variance-authority": "latest",
-    "tailwind-merge": "latest",
-    "nodemailer": "latest"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "next": "^14.2.15",
+    "lucide-react": "^0.452.0",
+    "octokit": "^4.0.2",
+    "radix-ui": "^1.0.1",
+    "class-variance-authority": "^0.7.0",
+    "tailwind-merge": "^2.5.4",
+    "nodemailer": "^6.9.15"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "postcss": "^8",
+    "typescript": "^5.6.3",
+    "@types/node": "^20.16.11",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "postcss": "^8.4.31",
     "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.15"
+    "eslint": "latest",
+    "eslint-config-next": "latest"
   }
 }
