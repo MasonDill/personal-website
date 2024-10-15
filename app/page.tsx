@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useState, useEffect } from 'react'
 
 export default function Home() {
-  const passions = [
+  const initialPassions = [
     "programming",
     "electronic design",
     "embedded systems",
@@ -16,10 +16,27 @@ export default function Home() {
     "open source collaboration",
     "IoT",
     "distributed systems",
-    "decentralization"
+    "decentralization",
+    "privacy",
+    "trustworthy systems"
   ]
 
+  const [passions, setPassions] = useState(initialPassions)
   const [currentPassionIndex, setCurrentPassionIndex] = useState(0)
+
+  useEffect(() => {
+    // Fisher-Yates shuffle algorithm
+    const shuffleArray = (array: string[]) => {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    // Randomize the passions array
+    setPassions(shuffleArray([...initialPassions]))
+  }, [])
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -33,7 +50,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       <main className="flex-grow flex flex-col justify-center px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Hi, I'm Mason Dill</h1>
+          <h1 className="text-4xl font-bold mb-4">Hi, I'm Mason</h1>
           <p className="text-xl mb-8">
             I'm passionate about{' '}
             <span className="text-blue-600 font-semibold">

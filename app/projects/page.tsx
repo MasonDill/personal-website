@@ -5,14 +5,13 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button"
 import { Skeleton } from "@/components/ui/skeleton"
 import { ExternalLink, Star, GitFork } from 'lucide-react'
-
 import { Octokit } from 'octokit'
 import githubConfig from '@/config/github.json'
 const octokit = new Octokit({ auth: githubConfig.auth_token })
 
 interface Repository {
   name: string
-  description: string
+  description?: string // Make this optional
   html_url: string
   stargazers_count: number
   forks_count: number
@@ -31,7 +30,18 @@ export default function Projects() {
           per_page: 6,
           visibility: 'public'
         })
-        setRepos(response.data)
+
+        // Map the response to match the Repository type
+        const repositories = response.data.map((repo: any) => ({
+          name: repo.name,
+          description: repo.description || '', // Default to empty string if undefined
+          html_url: repo.html_url,
+          stargazers_count: repo.stargazers_count,
+          forks_count: repo.forks_count,
+          language: repo.language,
+        }));
+
+        setRepos(repositories)
       } catch (error) {
         console.error('Error fetching repositories:', error)
       } finally {

@@ -7,7 +7,7 @@ export default function About() {
       <div className="flex flex-col md:flex-row gap-8">
         <div className="md:w-1/3">
           <Image 
-            src="/placeholder.svg?height=300&width=300" 
+            src="/public/portrait.png" 
             alt="Mason Dill" 
             width={300} 
             height={300} 
