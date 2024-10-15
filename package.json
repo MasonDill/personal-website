@@ -1,6 +1,10 @@
 {
   "name": "personal-website",
   "version": "0.1.0",
+  "engines": {
+    "node": "20.18.0",
+    "pnpm": "9.12.1"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
