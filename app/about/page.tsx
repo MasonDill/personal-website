@@ -26,14 +26,17 @@ export default function About() {
           <p className="mb-6">
             My technical interests span embedded systems, computer architecture, unconventional computing, telecommunications, signal processing, and full-stack development. 
             I'm currently working on several personal projects, including a PIC10 emulator, a custom lightweight transmission protocol, and a digital audio synthesizer among others.
-            I'm always eager to connect with others who share similar interests—feel free to reach out!
           </p>
           <p className="mb-6">
-            I believe that creating things and mastering new skills are the most fulfilling pursuits in life. Learning is a lifelong journey, and knowledge should be accessible to everyone.
-            In all domains, passion surpasses skill and meaning transcends happiness.
+            I believe that creating things and mastering skills are the most fulfilling pursuits in life. Learning is a lifelong journey, and knowledge should be accessible to everyone.
+            In all domains, passion surpasses talent.
+          </p>
+          <p className="mb-6">
+            Outside of tech, you'll find me exploring Pennsylvania's trails, floating down the Yough, camping in the Alleghenies, or playing my guitar.
           </p>
           <p>
-            Outside of tech, you'll find me exploring Pennsylvania's trails, camping in the Alleghenies, or working on my technique with my guitar.
+            I'm always interested in new employment oppertunities and eager to connect with others who share similar interests. Please don't hesitate to reach out!
+            If you are interested in connecting, <a href="/contact">contact me</a>.
           </p>
         </div>
       </div>
