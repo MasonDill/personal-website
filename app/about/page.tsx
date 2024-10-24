@@ -1,37 +1,42 @@
-import Image from 'next/image'
+import Image from 'next/image';
 
 export default function About() {
   return (
-    <div className="space-y-8">
-      <h1 className="text-3xl font-bold">About Me</h1>
-      <div className="flex flex-col md:flex-row gap-8">
-        <div className="md:w-1/3">
+    <div>
+      {/* Main Content */}
+      <div className="max-w-full mx-auto px-4 mt-4 grid grid-cols-5 items-start">
+        {/* Image Section */}
+        <div className="col-span-1 pr-4"> {/* Adjust padding to the right */}
           <Image 
-            src="/public/portrait.png" 
+            src="/portrait.png" 
             alt="Mason Dill" 
             width={300} 
             height={300} 
-            className="rounded-lg"
+            className="rounded-lg shadow-lg"
           />
         </div>
-        <div className="md:w-2/3">
-          <p className="mb-4">
-            Hello! I'm Mason Dill, an Engineer based in Pittsburgh, PA. I have several years of experience in embedded systems and wireless device development, specializing in embedded design and development.
+
+        {/* Text Section */}
+        <div className="col-span-2 text-lg"> {/* This takes the remaining space */}
+          <p className="mb-6">
+            Hello! I'm <strong>Mason Dill</strong>, a computer engineer based in Pittsburgh, PA. 
+            I specialize in low-level programming and electronic design, focusing on wireless device development for command and control applications. 
+            Lately, I've been building connectivity and IoT solutions that enable over-the-air updates, telemetry, and facilitating video streaming between devices.
           </p>
-          <p className="mb-4">
-            My passion for technology and problem-solving drives me to constantly learn and improve my skills. I believe in combining precision, efficiency, and creativity in my work to push the boundaries of what's possible in embedded systems design.
+          <p className="mb-6">
+            My technical interests span embedded systems, computer architecture, unconventional computing, telecommunications, signal processing, and full-stack development. 
+            I'm currently working on several personal projects, including a PIC10 emulator, a custom lightweight transmission protocol, and a digital audio synthesizer among others.
+            I'm always eager to connect with others who share similar interests—feel free to reach out!
+          </p>
+          <p className="mb-6">
+            I believe that creating things and mastering new skills are the most fulfilling pursuits in life. Learning is a lifelong journey, and knowledge should be accessible to everyone.
+            In all domains, passion surpasses skill and meaning transcends happiness.
           </p>
           <p>
-            When I'm not working, you can find me outdoors, enjoying camping, hiking, and exploring nature.
+            Outside of tech, you'll find me exploring Pennsylvania's trails, camping in the Alleghenies, or working on my technique with my guitar.
           </p>
         </div>
       </div>
-      {/* <section>
-        <h2 className="text-2xl font-semibold mb-4">Skills</h2>
-        <ul className="list-disc list-inside">
-          <li>skill</li>
-        </ul>
-      </section> */}
     </div>
-  )
+  );
 }
