@@ -116,7 +116,7 @@ export default function About() {
         </Card>
 
         {/* Rotating slideshow */}
-        <Card className="overflow-hidden">
+        {/* <Card className="overflow-hidden">
           <CardContent className="p-6">
             <h2 className="text-2xl font-bold mb-4">Personal Slideshow</h2>
             <div className="relative aspect-video overflow-hidden rounded-lg">
@@ -139,7 +139,7 @@ export default function About() {
               )}
             </div>
           </CardContent>
-        </Card>
+        </Card> */}
       </div>
     </div>
   )
