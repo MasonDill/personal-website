@@ -47,6 +47,8 @@ export default function Contact() {
 
   useEffect(() => {
     const textarea = document.getElementById('message');
+    if(textarea == null)
+      return;
     const resizeTextarea = () => {
       textarea.style.height = 'auto';
       textarea.style.height = textarea.scrollHeight + 'px';
